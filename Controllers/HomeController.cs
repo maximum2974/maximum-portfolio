@@ -15,12 +15,13 @@ namespace Maximum_Portfolio.Controllers
                 return View();
             }
 
-            public IActionResult Projects()
+            public IActionResult AboutMe()
             {
                 return View();
             }
+        
 
-            public IActionResult Resume()
+            public IActionResult Photography()
             {
                 return View();
             }
