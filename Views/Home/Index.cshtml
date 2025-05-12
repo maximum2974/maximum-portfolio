@@ -5,33 +5,53 @@
 <div class="hero-section text-center p-5" style="border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
     <div class="d-flex align-items-center justify-content-between" style="max-width: 1000px; margin: 0 auto;">
         <div class="profile-text w-50" style="text-align: left;">
-            <h1 style="font-size: 2.5rem; color: #2c3e50; font-weight: 700;">Hello, I am <span style="color: #3498db;">Liu Yunhao</span> <span class="waving-hand" style="display: inline-block; animation: wave 2.1s infinite; transform-origin: 75% 75%;">👋</span></h1>
-            <p style="font-size: 1.2rem; color: #34495e; margin: 1rem 0; text-align: justify;">
-                Full-Stack Developer | Tech Explorer | Innovation Practitioner
-            </p>
+            <h1 style="font-size: 2.5rem; color: #2c3e50; font-weight: 700;">Hello, I am <span style="color: #3498db;" id="typed-name"></span></h1>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0;">
+                <div style="background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 1.2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;" 
+                     onmouseover="this.style.transform='scale(1.05) translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'"
+                     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'"
+                     onclick="window.location.href='/Home/AboutMe'"
+                     onclick="this.style.transform='scale(0.98)'; setTimeout(() => {this.style.transform='scale(1)'}, 150)">
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <i class="fas fa-code" style="color: #3498db; font-size: 2em; margin-bottom: 0.8rem; background: rgba(52, 152, 219, 0.1); padding: 1rem; border-radius: 50%;"></i>
+                        <span style="font-weight: 600; font-size: 1.1rem; color: #2c3e50;">Full-Stack Developer</span>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 1.2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;"
+                     onmouseover="this.style.transform='scale(1.05) translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'"
+                     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'"
+                     onclick="window.location.href='/Home/AboutMe'"
+                     onclick="this.style.transform='scale(0.98)'; setTimeout(() => {this.style.transform='scale(1)'}, 150)">
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <i class="fas fa-laptop-code" style="color: #e74c3c; font-size: 2em; margin-bottom: 0.8rem; background: rgba(231, 76, 60, 0.1); padding: 1rem; border-radius: 50%;"></i>
+                        <span style="font-weight: 600; font-size: 1.1rem; color: #2c3e50;">Tech Explorer</span>
+                    </div>
+                </div>
+                <div style="background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 1.2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: all 0.3s ease; cursor: pointer;"
+                     onmouseover="this.style.transform='scale(1.05) translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'"
+                     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'"
+                     onclick="window.location.href='/Home/Photography'"
+                     onclick="this.style.transform='scale(0.98)'; setTimeout(() => {this.style.transform='scale(1)'}, 150)">
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <i class="fas fa-camera" style="color: #f1c40f; font-size: 2em; margin-bottom: 0.8rem; background: rgba(241, 196, 15, 0.1); padding: 1rem; border-radius: 50%;"></i>
+                        <span style="font-weight: 600; font-size: 1.1rem; color: #2c3e50;">Photographer</span>
+                    </div>
+                </div>
+            </div>
             <p style="color: #34495e; line-height: 1.8; margin-bottom: 2rem; text-align: justify;">
-                As a passionate Full-Stack Developer, I specialize in building dynamic and scalable web and mobile applications. With expertise in both front-end and back-end development, I'm dedicated to creating seamless user experiences and robust functionalities.
+                <i class="fas fa-rocket" style="color: #9b59b6; margin-right: 10px; font-size: 1.1em;"></i>
+                As a passionate Full-Stack Developer, I specialize in building dynamic and scalable web and mobile applications.
+                <br>
+                <i class="fas fa-cogs" style="color: #27ae60; margin-right: 10px; margin-top: 10px; font-size: 1.1em;"></i>
+                With expertise in both front-end and back-end development, I'm dedicated to creating seamless user experiences and robust functionalities.
             </p>
             <div class="d-flex gap-2">
                 <a href="/Home/AboutMe" class="btn btn-outline-dark">About me</a>
                 <a href="/Home/Contact" class="btn btn-outline-dark">Contact me</a>
             </div>
         </div>
-        <div class="profile-image w-50 d-flex justify-content-center">
-            <img src="/images/profile-3d.png" alt="3D Profile" style="width: 300px; height: auto;">
+        <div class="profile-image w-50 d-flex justify-content-center" style="padding-left: 10rem;">
+            <img src="images/3d-profile.png" alt="3D Profile" style="width: 350px; height: auto;">
         </div>
     </div>
 </div>
-
-<style>
-@keyframes wave {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-}
-</style>
