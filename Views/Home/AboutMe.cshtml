@@ -2,18 +2,275 @@
     ViewData["Title"] = "AboutMe";
 }
 
-<div id="about-me-page">
-  <!-- Existing content -->
-  <div id="wrapper">
-    <div id="content">
-      <div class="scroll">
-        <span>SCROLL</span>
-        <svg viewBox="0 0 24 24">
-          <line class="st1" x1="12" y1="1" x2="12" y2="22.5" />
-          <line class="st1" x1="12.1" y1="22.4" x2="18.9" y2="15.6" />
-          <line class="st1" x1="11.9" y1="22.4" x2="5.1" y2="15.6" />
-        </svg>
+<div class="container mt-3">
+    <h2 class="text-center mb-4" style="font-size: 2.8rem; font-weight: bold; color: #2c3e50;">Education Background</h2>
+
+    <div style="margin-top: 4rem;">
+        <div class="d-flex justify-content-center align-items-center" style="max-width: 1000px; margin: 0 auto;">
+            <!-- Image section -->
+            <img src="~/images/Xiamen_University_logo.svg.png" 
+                alt="Xiamen University Logo"
+                style="height: 140px; align-self: center; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 0.75rem;">
+            
+            <!-- Card Section -->
+            <div class="card" 
+                style="flex-grow: 1; margin-left: 2rem; background-color: #F6F5EF; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden;">
+                <div class="card-body" style="padding: 2.75rem; text-align: justify;">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="edu-icon me-3" style="font-size: 2.8rem; color: #3498db;">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div>
+                            <h3 class="card-title mb-1" style="font-size: 2rem; color: #2c3e50;">Xiamen University</h3>
+                            <h4 class="card-subtitle" style="font-size: 1.3rem; color: #555;">Bachelor of Software Engineering</h4>
+                        </div>
+                    </div>
+                    <hr style="border-top: 1px solid #d5d5d5; margin: 1.25rem 0;">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-calendar-alt me-2" style="color: #e67e22;"></i>
+                        <span class="text-muted" style="font-size: 1.1rem;">2022–2026</span>
+                    </div>
+                    <ul style="font-size: 1.1rem; color: #333; margin-top: 1.25rem; text-align: justify; list-style-type: disc; padding-left: 1.75rem;">
+                        <li><span class="badge bg-primary me-2">Full-Stack</span> Specialized in Full-Stack Development, mastering both front-end and back-end technologies.</li>
+                        <li><span class="badge bg-success me-2">AI</span> Conducted research on large language models and recommendation systems, focusing on innovative solutions.</li>
+                        <li><span class="badge bg-warning text-dark me-2">ML</span> Engaged in projects that integrated AI and machine learning to enhance user experience and system efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="margin-top: 15rem;"></div>
+
+<!-- Start of Technical Stack Section -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4" style="font-size: 2.8rem; font-weight: bold; color: #2c3e50;">Technical Stack</h2>
+
+    <div style="margin-top: 4rem;"></div>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+    <!-- Backend -->
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Java</h5>
+        <p class="card-text" style="text-align: justify;">Java is a robust language used for backend development, especially in enterprise-level systems.</p>
       </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Golang" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Golang</h5>
+        <p class="card-text" style="text-align: justify;">Golang is known for its simplicity and efficiency in building scalable server-side applications.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Dart</h5>
+        <p class="card-text" style="text-align: justify;">Dart is optimized for UI development and powers the Flutter framework for multi-platform apps.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Python</h5>
+        <p class="card-text" style="text-align: justify;">Python is a high-level language known for its readability and wide range of applications.</p>
+      </div>
+    </div>
+
+    <!-- Frontend -->
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="40">
+        </div>
+        <h5 class="card-title fw-bold">JavaScript</h5>
+        <p class="card-text" style="text-align: justify;">JavaScript is a core technology of the web, enabling interactive web pages.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="40">
+        </div>
+        <h5 class="card-title fw-bold">HTML</h5>
+        <p class="card-text" style="text-align: justify;">HTML is the standard markup language for creating web pages and web applications.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="40">
+        </div>
+        <h5 class="card-title fw-bold">CSS</h5>
+        <p class="card-text" style="text-align: justify;">CSS is used to style and layout web pages, including colors, fonts, and spacing.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Vue</h5>
+        <p class="card-text" style="text-align: justify;">Vue.js is a lightweight front-end framework for building interactive UIs and SPAs.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="40">
+        </div>
+        <h5 class="card-title fw-bold">React</h5>
+        <p class="card-text" style="text-align: justify;">React is a declarative JavaScript library for building component-based UIs efficiently.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Flutter</h5>
+        <p class="card-text" style="text-align: justify;">Flutter is a modern UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.</p>
+      </div>
+    </div>
+
+    <!-- CI/CD & Middleware -->
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Docker</h5>
+        <p class="card-text" style="text-align: justify;">Docker simplifies application deployment by packaging software into containers.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Kubernetes</h5>
+        <p class="card-text" style="text-align: justify;">Kubernetes is a powerful orchestration system for managing containerized applications.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <i class="fas fa-exchange-alt fa-2x" style="color: #e67e22;"></i>
+        </div>
+        <h5 class="card-title fw-bold">RabbitMQ</h5>
+        <p class="card-text" style="text-align: justify;">RabbitMQ is an open-source message broker software that facilitates communication between applications.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg" alt="Elasticsearch" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Elasticsearch</h5>
+        <p class="card-text" style="text-align: justify;">Elasticsearch is a powerful search and analytics engine used for log and text data, supporting real-time search, logging, and monitoring.</p>
+      </div>
+    </div>
+
+    <!-- AI & ML -->
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" width="40">
+        </div>
+        <h5 class="card-title fw-bold">TensorFlow</h5>
+        <p class="card-text" style="text-align: justify;">TensorFlow is an open-source platform for machine learning and deep learning applications.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" width="40">
+        </div>
+        <h5 class="card-title fw-bold">PyTorch</h5>
+        <p class="card-text" style="text-align: justify;">PyTorch is an open-source machine learning library used in CV and NLP.</p>
+      </div>
+    </div>
+
+    <!-- Additional Technologies -->
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" width="40">
+        </div>
+        <h5 class="card-title fw-bold">MySQL</h5>
+        <p class="card-text" style="text-align: justify;">MySQL is a widely used relational database management system known for its reliability and ease of use.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Git</h5>
+        <p class="card-text" style="text-align: justify;">Git is a distributed version control system that helps manage code changes across multiple contributors.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Linux</h5>
+        <p class="card-text" style="text-align: justify;">Linux is a versatile and open-source operating system used widely in servers and development environments.</p>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF;">
+        <div class="mb-3">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" width="40">
+        </div>
+        <h5 class="card-title fw-bold">Nginx</h5>
+        <p class="card-text" style="text-align: justify;">Nginx is a high-performance web server and reverse proxy used for serving static content and load balancing.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End of Technical Stack Section -->
+
+<div style="margin-top: 10rem;"></div>
+
+<div class="col text-center">
+  <h2 class="card-title fw-bold mb-4">GitHub Contribution Activity</h2>
+  <div class="card h-100 p-3 shadow-lg border-0 rounded-5" style="background-color: #F6F5EF; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 8px 32px rgba(0, 0, 0, 0.35);">
+    <div class="mb-3">
+      <img src="https://github.com/maximum2974/maximum2974/raw/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" style="max-width:100%;height:auto;" />
     </div>
   </div>
 </div>
+
+
+<div style="margin-top: 10rem;"></div>
