@@ -1,5 +1,10 @@
 html {
   font-size: 14px;
+  font-family: 'Sour Gummy', sans-serif;
+}
+
+body {
+  font-family: 'Sour Gummy', sans-serif !important;
 }
 
 @media (min-width: 768px) {
@@ -9,7 +14,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.8), 0 0 0 0.25rem #4CAF50; 
 }
 
 html {
@@ -18,5 +23,56 @@ html {
 }
 
 body {
+  background: #F6F5F0;
   margin-bottom: 60px;
+}
+
+.center-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F6F5F0;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1); 
+  padding: 0.5rem 2.5rem;
+  margin: 2rem auto 2.5rem auto;
+  width: fit-content;
+  min-width: 420px;
+}
+
+.center-navbar ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.center-navbar li a {
+  color: #333; 
+  text-decoration: none;
+  font-size: 1.18rem;
+  transition: color 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.center-navbar li.active a {
+  color: #4A4A4A; 
+}
+
+.center-navbar li a:hover {
+  color: #233142; 
+}
+
+.center-navbar {
+  position: relative;
+  z-index: 10;
+}
+
+.waving-hand {
+  display: inline-block;
+  animation: wave 2.1s 1.4s infinite;
+  transform-origin: 75% 75%;
+  margin: 0 2px;
 }
