@@ -1,0 +1,77 @@
+# Maximum Portfolio
+
+A modern, interactive personal portfolio web application built with ASP.NET Core MVC, featuring:
+- Animated technical stack and project showcase (GSAP, CSS3)
+- Responsive design and beautiful UI
+- Contact form with email sending (Gmail SMTP, MailKit)
+- Environment-based configuration for security
+
+## Features
+- **Animated Sections**: Technical stack, projects, and GitHub activity with smooth GSAP animations
+- **Project Slider**: Horizontal project showcase with touchpad/scroll navigation
+- **Contact Form**: Users can send you a message, and both you and the sender receive email notifications
+- **Responsive Design**: Looks great on desktop and mobile
+
+## Tech Stack
+- **Backend**: ASP.NET Core MVC (.NET 6+)
+- **Frontend**: HTML5, CSS3, Bootstrap, GSAP (GreenSock Animation Platform)
+- **Email**: MailKit (Gmail SMTP)
+
+## Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/maximum2974/maximum-portfolio.git
+   cd maximum-portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   dotnet restore
+   dotnet add package MailKit
+   ```
+
+3. **Configuration**
+   - Copy `appsettings.Development.json.example` to `appsettings.Development.json` (or create your own)
+   - Fill in your Gmail credentials (use [App Passwords](https://support.google.com/accounts/answer/185833?hl=en) for Gmail)
+   - **Never commit real passwords!**
+
+   ```json
+   {
+     "EmailSettings": {
+       "SmtpServer": "smtp.gmail.com",
+       "Port": 587,
+       "Username": "your-gmail@gmail.com",
+       "Password": "your-app-password",
+       "ToEmail": "your-gmail@gmail.com"
+     }
+   }
+   ```
+
+4. **Run the project**
+   ```bash
+   dotnet run
+   ```
+   The app will be available at `https://localhost:5001` (or similar).
+
+## Email Security & Environment Separation
+- **appsettings.Development.json**: For local dev only, ignored by git
+- **appsettings.Production.json**: For production, never commit to git
+- **.gitignore**: Already set to ignore local secrets
+- **Production secrets**: Use environment variables or secret managers in deployment
+
+## Deployment
+- Publish with `dotnet publish`
+- Set environment variables or provide `appsettings.Production.json` on the server
+
+## Screenshots
+- ![Technical Stack](screenshots/tech-stack.png)
+- ![Project Slider](screenshots/project-slider.png)
+- ![Contact Form](screenshots/contact-form.png)
+
+## License
+MIT
+
+---
+
+**Security Reminder:** Never commit real passwords or secrets to your repository. Always use environment separation and secret management for production deployments. 
