@@ -30,7 +30,7 @@
 </head>
 <body>
     <div class="content-wrapper">
-        <header>
+        <header style="position: fixed; top: 0; width: 100%; z-index: 1000;">
             <!-- Navigation bar -->
             <nav class="center-navbar">
                 <ul>
@@ -51,7 +51,7 @@
         </header>
         
         <!-- Main Content Area -->
-        <div class="container">
+        <div class="container" style="margin-top: 120px;">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>

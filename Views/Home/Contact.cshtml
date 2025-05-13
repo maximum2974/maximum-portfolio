@@ -3,23 +3,90 @@
     ViewData["Title"] = "Contact";
 }
 
-<h1>Contact</h1>
-@if (ViewBag.Message != null)
+@if (TempData["SuccessMessage"] != null)
 {
-    <div class="alert alert-success">@ViewBag.Message</div>
+    <div id="floatingMessage" class="alert text-center position-fixed top-0 start-50 translate-middle-x mt-3" style="z-index: 1050; background-color: #EAE9E4;">
+        @TempData["SuccessMessage"]
+    </div>
+    <script>
+        setTimeout(() => {
+            const messageElement = document.getElementById('floatingMessage');
+            if (messageElement) {
+                messageElement.style.transition = 'opacity 0.5s ease';
+                messageElement.style.opacity = '0';
+                setTimeout(() => messageElement.remove(), 500);
+            }
+        }, 3000);
+    </script>
 }
-<form asp-action="Contact" method="post">
-    <div class="form-group">
-        <label for="Name">Name</label>
-        <input type="text" class="form-control" id="Name" name="Name" required />
+
+<div class="container my-5">
+    <div class="row g-4 align-items-stretch justify-content-center">
+        <!-- Map on the left -->
+        <div class="col-md-6">
+            <div class="h-100 rounded-4 shadow overflow-hidden">
+                <iframe
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCpy2jbBabWD3ZmeKJwzjHYHnBcIhVkhuE&q=Xiamen+University"
+                    width="100%" height="100%" frameborder="0"
+                    style="border:0; min-height: 400px;"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Contact form on the right -->
+        <div class="col-md-6">
+            <div class="card h-100 border-0 shadow rounded-4" style="background-color: #F6F5EF; box-shadow: 0 15px 50px rgba(60,60,60,0.3);">
+                <div class="card-body p-5">
+                    <form asp-action="Contact" method="post">
+                        <div class="mb-4">
+                            <label for="Name" class="form-label fw-bold">
+                                <i class="fas fa-user me-2"></i>Name
+                            </label>
+                            <input type="text" class="form-control rounded-pill shadow-sm" id="Name" name="Name" required />
+                        </div>
+                        <div class="mb-4">
+                            <label for="Email" class="form-label fw-bold">
+                                <i class="fas fa-envelope me-2"></i>Email
+                            </label>
+                            <input type="email" class="form-control rounded-pill shadow-sm" id="Email" name="Email" required />
+                        </div>
+                        <div class="mb-4">
+                            <label for="Message" class="form-label fw-bold">
+                                <i class="fas fa-comment-dots me-2"></i>Message
+                            </label>
+                            <textarea class="form-control rounded-3 shadow-sm" id="Message" name="Message" rows="5" required></textarea>
+                        </div>
+
+                        <!-- Contact Icons + Send Button -->
+                        <div class="d-flex align-items-center justify-content-between mt-4">
+                            <!-- Phone icon with tooltip -->
+                            <i class="fas fa-phone fa-lg text-secondary"
+                               style="cursor: pointer;"
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="top"
+                               title="+86 15700682557"
+                               onmouseover="this.style.color='#2980b9';"
+                               onmouseout="this.style.color='#3498db';"></i>
+
+                            <!-- Email icon with mailto link -->
+                            <a href="mailto:lyunhao27@gmail.com" class="text-decoration-none text-secondary ms-3 me-auto">
+                                <i class="fas fa-envelope fa-lg"></i>
+                            </a>
+
+                            <!-- Send Message button -->
+                            <button type="submit"
+                                    class="btn btn-light rounded-pill shadow-sm px-4"
+                                    style="background-color: white;"
+                                    onmouseover="this.style.backgroundColor='#EAE9E4';"
+                                    onmouseout="this.style.backgroundColor='white';">
+                                <i class="fas fa-paper-plane me-2" style="filter: grayscale(100%);"></i>Send Message
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="Email">Email</label>
-        <input type="email" class="form-control" id="Email" name="Email" required />
-    </div>
-    <div class="form-group">
-        <label for="Message">Message</label>
-        <textarea class="form-control" id="Message" name="Message" rows="4" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send</button>
-</form>
+</div>

@@ -175,40 +175,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // GitHub Contribution Activity 卡片动画
-    const githubCard = document.querySelector('.col.text-center .card');
+    // GitHub Contribution Activity 动画
+    const githubCard = document.querySelector('.github-activity-card');
     if (githubCard) {
-        // 入场动画
         gsap.from(githubCard, {
             scrollTrigger: {
                 trigger: githubCard,
-                start: "top bottom-=100",
-                toggleActions: "play none none reverse"
+                start: "top 80%",
+                toggleActions: "play none none reverse",
             },
             y: 60,
             opacity: 0,
-            duration: 1,
-            ease: "power2.out"
+            duration: 1.2,
+            ease: "power2.out",
         });
+    }
+});
 
-        // 悬停动画
-        githubCard.addEventListener('mouseenter', () => {
-            gsap.to(githubCard, {
-                y: -12,
-                scale: 1.02,
-                boxShadow: "0 4px 16px rgba(60,60,60,0.28), 0 16px 32px rgba(0,0,0,0.48)",
-                duration: 0.4,
-                ease: "power2.out"
-            });
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 横滑区域
+    const slider = document.getElementById('project-slider');
+    if (slider) {
+        const cards = slider.querySelectorAll('.project-card');
+        const cardCount = cards.length;
+        const container = slider.parentElement;
+        const containerWidth = container.offsetWidth;
+        const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(slider).gap || 0, 10);
+
+        // 横向滚动总宽度
+        const totalScroll = cardWidth * cardCount - containerWidth;
+
+        // 横向滚动动画
+        gsap.to(slider, {
+            x: () => -(totalScroll),
+            ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: ".project-slider-section",
+                start: "top top",
+                end: () => `+=${totalScroll}`,
+                scrub: 0.6,
+                pin: true,
+                anticipatePin: 1,
+                snap: {
+                    snapTo: 1 / (cardCount - 1),
+                    duration: {min: 0.2, max: 0.5},
+                    ease: "power1.inOut"
+                }
+            }
         });
-        githubCard.addEventListener('mouseleave', () => {
-            gsap.to(githubCard, {
-                y: 0,
-                scale: 1,
-                boxShadow: "0 2px 8px rgba(60,60,60,0.18), 0 8px 24px rgba(60,60,60,0.28)",
-                duration: 0.4,
-                ease: "power2.out"
-            });
+    }
+
+    // Projects title animation
+    const projectsTitle = document.querySelector('.project-title');
+    if (projectsTitle) {
+        gsap.from(projectsTitle, {
+            scrollTrigger: {
+                trigger: projectsTitle,
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+                // markers: true // Uncomment for debugging
+            },
+            y: 60,
+            opacity: 0,
+            duration: 1.2,
+            ease: "power2.out",
         });
     }
 });
