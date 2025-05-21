@@ -244,3 +244,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (!document.body.classList.contains('photography-page')) return;
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
+    // h1 entrance animation
+    gsap.from('.photography-page .header-section h1', {
+      opacity: 0,
+      y: 60,
+      duration: 1.2,
+      ease: 'power3.out'
+    });
+  
+    // Skew scroll effect for images
+    let proxy = { skew: 0 },
+        skewSetter = gsap.quickSetter(".photography-page .skewElem", "skewY", "deg"),
+        clamp = gsap.utils.clamp(-20, 20);
+  
+    ScrollTrigger.create({
+      onUpdate: (self) => {
+        let skew = clamp(self.getVelocity() / -300);
+        if (Math.abs(skew) > Math.abs(proxy.skew)) {
+          proxy.skew = skew;
+          gsap.to(proxy, {
+            skew: 0,
+            duration: 0.8,
+            ease: "power3",
+            overwrite: true,
+            onUpdate: () => skewSetter(proxy.skew)
+          });
+        }
+      }
+    });
+    gsap.set(".photography-page .skewElem", { transformOrigin: "right center", force3D: true });
+  });
+  

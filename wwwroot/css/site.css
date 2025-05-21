@@ -261,3 +261,59 @@ body {
 .toast-body {
   padding: 1rem;
 }
+
+.photography-page {
+  background-color: #F6F5EF;
+  text-align: center;
+}
+
+.photography-page .skew-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  justify-items: stretch;
+  align-items: stretch;
+  margin-top: 4vh;
+}
+
+@media (max-width: 900px) {
+  .photography-page .skew-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.photography-page .skewElem {
+  margin-bottom: 0;
+  width: 100%;
+  max-width: none;
+  height: 48vw;
+  max-height: 80vh;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  background: #222;
+  display: block;
+}
+
+.photography-page .header-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.photography-page .header-section h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: #222;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  line-height: 1.2;
+  padding: 0 1rem;
+  transform: translateY(-12vh);
+}
