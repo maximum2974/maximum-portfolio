@@ -79,7 +79,7 @@ namespace maximum_portfolio.Services
                         <p>Hi {toName},</p>
                         <p>I have received your message and will get back to you as soon as possible.</p>
                         <p style='margin-top: 20px;'>
-                            <img src='https://raw.githubusercontent.com/maximum2974/markdown-image/develop/3d-profile.png' alt='Thank You' style='width: 50px; height: 50px; vertical-align: middle;' />
+                            <img src='https://raw.githubusercontent.com/maximum2974/markdown-image/develop/3d-profile.jpg' alt='Thank You' style='width: 50px; height: 50px; vertical-align: middle;' />
                         </p>
                         <p>Best regards,<br/><strong>Maximum</strong> <i class='fas fa-smile'></i></p>
                     </div>"
