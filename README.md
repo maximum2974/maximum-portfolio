@@ -6,6 +6,11 @@ A modern, interactive personal portfolio web application built with ASP.NET Core
 - Contact form with email sending (Gmail SMTP, MailKit)
 - Environment-based configuration for security
 
+## Live Demo
+
+Check out the live demo of the Maximum Portfolio application: [Live Demo](http://45.145.228.53:5053/)
+
+
 ## Features
 - **Animated Sections**: Technical stack, projects, and GitHub activity with smooth GSAP animations
 - **Project Slider**: Horizontal project showcase with touchpad/scroll navigation
