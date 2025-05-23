@@ -64,10 +64,10 @@ A modern, interactive personal portfolio web application built with ASP.NET Core
 - Set environment variables or provide `appsettings.Production.json` on the server
 
 ## Screenshots
-- ![Home](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161518222.png)
-- ![About Me](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161609779.png)
-- ![Photography](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161700860.png)
-- ![Contact](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161747903.png)
+![Home](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523162356293.png)
+![About Me](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523162427505.png)
+![Photography](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523162452457.png)
+![Contact](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523162536896.png)
 
 ## License
 MIT
