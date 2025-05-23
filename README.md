@@ -25,13 +25,7 @@ A modern, interactive personal portfolio web application built with ASP.NET Core
    cd maximum-portfolio
    ```
 
-2. **Install dependencies**
-   ```bash
-   dotnet restore
-   dotnet add package MailKit
-   ```
-
-3. **Configuration**
+2. **Configuration**
    - Copy `appsettings.Development.json.example` to `appsettings.Development.json` (or create your own)
    - Fill in your Gmail credentials (use [App Passwords](https://support.google.com/accounts/answer/185833?hl=en) for Gmail)
    - **Never commit real passwords!**
@@ -48,11 +42,16 @@ A modern, interactive personal portfolio web application built with ASP.NET Core
    }
    ```
 
-4. **Run the project**
-   ```bash
-   dotnet run
-   ```
-   The app will be available at `https://localhost:5001` (or similar).
+3. **Build and Run with Docker**
+   - Build the Docker image:
+     ```bash
+     docker build -t maximum-portfolio .
+     ```
+   - Run the Docker container:
+     ```bash
+     docker run -d -p 5053:5053 --name maximum-portfolio-container maximum-portfolio
+     ```
+   The app will be available at `http://localhost:5053`.
 
 ## Email Security & Environment Separation
 - **appsettings.Development.json**: For local dev only, ignored by git
@@ -61,13 +60,14 @@ A modern, interactive personal portfolio web application built with ASP.NET Core
 - **Production secrets**: Use environment variables or secret managers in deployment
 
 ## Deployment
-- Publish with `dotnet publish`
+- Use Docker to build and run the application
 - Set environment variables or provide `appsettings.Production.json` on the server
 
 ## Screenshots
-- ![Technical Stack](screenshots/tech-stack.png)
-- ![Project Slider](screenshots/project-slider.png)
-- ![Contact Form](screenshots/contact-form.png)
+- ![Home](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161518222.png)
+- ![About Me](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161609779.png)
+- ![Photography](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161700860.png)
+- ![Contact](https://raw.githubusercontent.com/maximum2974/markdown-image/develop/image-20250523161747903.png)
 
 ## License
 MIT
